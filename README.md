@@ -1,0 +1,4 @@
+# DJANGO project MY APP
+
+
+
