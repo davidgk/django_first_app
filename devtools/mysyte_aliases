@@ -1,0 +1,5 @@
+#/bin/bash
+export pj_home=$(pwd)
+export pj_mysite=$pj_pj_home/mysite
+alias myRun="python manage.py"
+alias startServer="myRun runserver 3010"
