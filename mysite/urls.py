@@ -18,9 +18,10 @@ from django.urls import include, path
 
 import myapp
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # esun prefijo el home aca
-    path('home/', include('myapp.urls')),
+    path('', include('myapp.urls')),
 
 ]

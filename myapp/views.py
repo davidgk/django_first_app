@@ -1,15 +1,24 @@
 from django.forms import model_to_dict
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.core import serializers
 from myapp.models import Project, Task, MyEncoder
 import json
+
+
+def index(request):
+    title='Django Course!'
+    return render(request, 'index.html', {
+        'title': title
+    })
 
 def hello(request, name = "world"):
     return HttpResponse(f'<h1>hello {name}</h1>')
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    return render(request, 'about.html',{
+        'username' : 'davidgk'
+    })
 
 def projects(request):
     try:
@@ -32,3 +41,5 @@ def task_by_id(request, id_task):
     # a_task_ser = serializers.serialize('json', [task])
     a_task_ser = model_to_dict(task)
     return JsonResponse(json.dumps(a_task_ser), safe=False)
+
+
