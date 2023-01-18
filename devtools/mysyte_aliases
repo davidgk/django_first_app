@@ -2,7 +2,7 @@
 export pj_home=$(pwd)
 export pj_mysite=$pj_pj_home/mysite
 alias djRun="python manage.py"
-alias djStartApp="python manage.py startapp"
+alias djAddApp="python manage.py startapp"
 alias startServer="djRun runserver 3010"
 alias makeMigrations="djRun makemigrations"
 alias runMigrations="djRun migrate"
