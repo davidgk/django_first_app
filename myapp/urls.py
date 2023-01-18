@@ -19,4 +19,8 @@ from myapp import views
 urlpatterns = [
     path('', views.hello),
     path('about/', views.about),
+    path('hello/<str:name>', views.hello),
+    path('projects/', views.projects),
+    path('task/<int:id_task>', views.task_by_id),
+    path('tasks-by-project/<int:id_project>', views.project_tasks),
 ]
