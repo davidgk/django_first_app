@@ -9,3 +9,6 @@ como
 * [DB Browser for SQLlite](https://sqlitebrowser.org/)
 
 
+## Admin    
+user davidgk    
+pass bab...xx
