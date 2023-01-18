@@ -1,0 +1,10 @@
+### create a post
+POST http://localhost:3010/api/post/
+Content-Type: application/json
+
+{
+  "title": "un buen libro",
+  "content": "pedazo de sanguche"
+}
+
+

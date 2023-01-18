@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from post.api.router import router_posts
 
-import myapp
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # esun prefijo el home aca
     path('', include('myapp.urls')),
+    path('api/', include(router_posts.urls)),
 
 ]
